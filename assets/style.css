@@ -126,6 +126,11 @@ header {
 
 #banner .arrow {
 	position: absolute;
+	transition: transform 0.3s ease;
+}
+
+#banner .arrow:hover {
+  transform: scale(1.2);
 }
 
 #banner .arrow_left {
@@ -136,6 +141,8 @@ header {
 	right: 50px;
 	cursor: pointer;
 }
+
+
 
 /* Gestion des points du carrousel */
 .dots {
