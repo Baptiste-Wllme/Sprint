@@ -76,13 +76,17 @@ const arrowLeft = document.querySelector('.arrow_left');
 
 arrowRight.addEventListener('click', () => {
   i++;
-  
+  if (i >= slides.length) {
+    i = 0;
+  }
   updateCarousel(i);
 });
 
 arrowLeft.addEventListener('click', () => {
 	i--;
-	
+	if (i < 0) {
+    i = slides.length - 1;
+  }
 	updateCarousel(i);
 });
 
