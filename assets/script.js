@@ -48,6 +48,46 @@ slides.forEach((slide, index) => {
 
 
 
+// Dynamisme des flèches, MAJ des dots et du texte //
+
+let i = 0;
+
+function updateCarousel(index) {
+  const imageElement = document.querySelector('.banner-img');
+  const textElement = document.querySelector('#banner p');
+
+  imageElement.src = `./assets/images/slideshow/${slides[index].image}`;
+
+  textElement.innerHTML = slides[index].tagLine;
+
+  const allDots = document.querySelectorAll('.dot');
+  allDots.forEach(dot => dot.classList.remove('dot_selected'));
+  allDots[index].classList.add('dot_selected');
+
+
+}
+
+
+
+ // Carrousel qui tourne //  
+
+const arrowRight = document.querySelector('.arrow_right');
+const arrowLeft = document.querySelector('.arrow_left');
+
+arrowRight.addEventListener('click', () => {
+  i++;
+  
+  updateCarousel(i);
+});
+
+arrowLeft.addEventListener('click', () => {
+	i--;
+	
+	updateCarousel(i);
+});
+
+
+
 
 
 
