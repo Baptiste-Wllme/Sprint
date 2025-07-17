@@ -18,6 +18,20 @@ const slides = [
 ]
 
 
+// Flèches //
+
+const leftArrow = document.querySelector('.arrow_left');
+const rightArrow = document.querySelector('.arrow_right');
+
+leftArrow.addEventListener('click', function () {
+  console.log('Flèche gauche cliquée');
+  });
+
+rightArrow.addEventListener('click', function () {
+  console.log('Flèche droite cliquée');
+  });
+
+
 
 
 
