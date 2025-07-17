@@ -43,6 +43,12 @@ slides.forEach((slide, index) => {
   if (index === 0) {
     dot.classList.add('dot_selected');    
   }
+
+  dot.addEventListener('click', () => {
+      currentIndex = index;
+      updateCarousel(currentIndex);
+  });
+
   dotsContainer.appendChild(dot);
 });
 
